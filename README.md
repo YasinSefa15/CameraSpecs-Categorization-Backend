@@ -1,67 +1,70 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Camera Specifications and Categorization
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Bu Laravel projesi, çeşitli kameraların teknik özelliklerini görüntüleyen, kontrol eden bir altyapıyı oluşturmayı amaçlamaktadır.
 
-## About Laravel
+## Proje Açıklaması
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Bu projenin amacı, farklı kamera modellerinin teknik özelliklerini çekerek, bu özellikleri kategorilere ayırarak ve sunarak, kullanıcıların ihtiyaç duyduğu bilgilere hızlıca erişmelerini sağlamaktır.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Veriler, aşağıdaki kaynaktan alınmaktadır:
+[https://www.digicamdb.com/cameras/](https://www.digicamdb.com/cameras/)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Özellikler
 
-## Learning Laravel
+- **Veri Toplama ve Saklama:** Proje, belirtilen kaynaktan kamera teknik özelliklerini çeker ve veritabanında saklar. Bu sayede kullanıcılar, verilere hızlıca erişebilir.
+- **Üretici Tabanlı Görüntüleme:** Kullanıcılar, farklı üreticilerin kameralarına göz atabilirler. Örneğin, Canon marka kameralar, Nikon marka kameralar gibi üreticilerin ürün yelpazesine erişebilirler.
+- **Kamera Detay Sayfası:** Her kamera modeli için ayrıntılı bir detay sayfası bulunmaktadır. Kullanıcılar, seçtikleri kamera modelinin daha geniş teknik özelliklerini, resimlerini ve ilgili bilgileri inceleyebilirler.
+- **Arama Seçenekleri:** Kullanıcılar, kameraları isme göre arayabilir. Bu, istedikleri isme sahip kameraları hızla bulmalarını sağlar.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Kolay Yönetim ve Bakım
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Projemiz, yönetim ve bakım süreçlerini basit ve etkili bir şekilde destekler. Aşağıdaki özellikler, projenin yönetimini ve bakımını daha da kolaylaştırır:
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. **Veri CRUD İşlemleri:** Projede ekleme, silme, düzenleme gibi aksiyonlar için routelar (yollar) sağlanmıştır.
 
-## Laravel Sponsors
+2. **Veri Güncellemeleri İçin Otomatik Komutlar:** Projede kullanılan verileri güncellemek ve senkronize etmek için özel komutlar sunulmaktadır. Bu komutlar, projenin kullandığı kaynaktan otomatik olarak veri çekerek, veritabanını güncellemeyi sağlar.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+3. **Veri Senkronizasyonu:** Projede yer alan komutlar sayesinde, kaynaktaki verilerle projedeki verileri senkronize etmek kolaydır. Bu, güncel ve doğru verilere erişimin sağlanmasını sağlar.
 
-### Premium Partners
+4. **Veritabanı Yönetimi:** Projenin veritabanını güncellemek veya yönetmek için gerekli routelar (yolllar) sunulmaktadır. Bu sayede veritabanındaki kamera modelleri ve özellikleri yönetilirken güvenilir bir yöntem sunulur.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+Bu özellikler, projenin yönetimini ve bakımını daha erişilebilir ve kullanıcı dostu hale getirerek, projeyi genişletmek veya verileri güncellemek isteyen geliştiricilere kolaylık sağlar.
 
-## Contributing
+## Gereksinimler
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+- PHP 8.1 veya daha üstü
+- Laravel 10.0 veya daha üstü
+- MySQL veya diğer bir veritabanı yönetim sistemi
 
-## Code of Conduct
+## Kurulum
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Bu bölümde, projeyi yerel bir geliştirme ortamında çalıştırmak için adımları bulabilirsiniz.
 
-## Security Vulnerabilities
+1. Projeyi klonlayın:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   ```bash
+   git clone https://github.com/kullanici/ProjeAdi.git
 
-## License
+2. Proje dizinine gidin:
+   ```bash
+   cd ProjeAdi
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-# CameraSpecs-Categorization-Backend
+4. Gerekli bağımlılıkları yükleyin:
+
+    ```bash
+    composer install
+
+5. .env dosyasını oluşturun ve veritabanı ayarlarını yapın:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+
+6. Veritabanını oluşturun ve migrate işlemini gerçekleştirin:
+    ```bash
+    php artisan migrate
+
+7. Projeyi çalıştırın:
+    ```bash
+    php artisan serve
+    
+8. Tarayıcınızı açın ve http://127.0.0.1:8000 adresine giderek uygulamayı görüntüleyin.
