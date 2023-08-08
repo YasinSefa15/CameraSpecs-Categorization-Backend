@@ -11,9 +11,6 @@ Veriler, aşağıdaki kaynaktan alınmaktadır:
 
 ## Özellikler
 
-- Farklı kamera üreticilerinin teknik bilgilerinin toplanması.
-- Farklı kamera modellerinin teknik özelliklerinin toplanması.
-- Teknik özelliklerin kategorize edilmesi ve saklanması.
 - **Veri Toplama ve Saklama:** Proje, belirtilen kaynaktan kamera teknik özelliklerini çeker ve veritabanında saklar. Bu sayede kullanıcılar, verilere hızlıca erişebilir.
 - **Üretici Tabanlı Görüntüleme:** Kullanıcılar, farklı üreticilerin kameralarına göz atabilirler. Örneğin, Canon marka kameralar, Nikon marka kameralar gibi üreticilerin ürün yelpazesine erişebilirler.
 - **Kamera Detay Sayfası:** Her kamera modeli için ayrıntılı bir detay sayfası bulunmaktadır. Kullanıcılar, seçtikleri kamera modelinin daha geniş teknik özelliklerini, resimlerini ve ilgili bilgileri inceleyebilirler.
@@ -38,7 +35,6 @@ Bu özellikler, projenin yönetimini ve bakımını daha erişilebilir ve kullan
 - PHP 8.1 veya daha üstü
 - Laravel 10.0 veya daha üstü
 - MySQL veya diğer bir veritabanı yönetim sistemi
-
 
 ## Kurulum
 
