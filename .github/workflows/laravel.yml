@@ -11,6 +11,16 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: cameras_db_testing
+          MYSQL_ALLOW_EMPTY_PASSWORD: true
+          MYSQL_ROOT_PASSWORD: ${{ secrets.MYSQL_PASSWORD }}
+        ports:
+          - 3306:3306
+        options: --health-cmd="mysqladmin ping" --health-interval=5s --health-timeout=5s --health-retries=3
     steps:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -21,7 +31,9 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Copy .env
-        run: cp .env.ci .env
+        run: |
+          cp .env.ci .env
+          cp .env.ci.testing .env.testing
 
       - name: Install Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
@@ -32,8 +44,13 @@ jobs:
       - name: Directory Permissions
         run: chmod -R 777 storage bootstrap/cache
 
+      - name: Config clear
+        run: php artisan config:clear
+
       - name: Pint check code-style
-        run: ./vendor/bin/pint --test
+        run: ./vendor/bin/pint
 
       - name: Execute tests
         run: php artisan test
+        env:
+          DB_DATABASE: cameras_db_testing
