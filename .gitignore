@@ -18,3 +18,5 @@ yarn-error.log
 /.idea
 /.vscode
 .env.testing
+/public/images/brands/
+/public/images/cameras/

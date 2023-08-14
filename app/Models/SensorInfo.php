@@ -21,8 +21,4 @@ class SensorInfo extends Model
         'pixel_area',
         'pixel_density',
     ];
-
-    protected $casts = [
-        'diagonal' => 'double',
-    ];
 }

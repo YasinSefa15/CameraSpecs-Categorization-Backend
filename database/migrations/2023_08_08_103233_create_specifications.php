@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('camera_id')->constrained('cameras');
             $table->string('title', 32);
-            $table->string('value', 32);
+            $table->string('value')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('cameras', function (Blueprint $table) {
             $table->id();
             $table->foreignId('brand_id')->constrained('brands');
-            $table->string('model', 32);
+            $table->string('model', 64);
             $table->unsignedDecimal('megapixels');
             $table->unsignedSmallInteger('year');
             $table->timestamps();
