@@ -93,6 +93,14 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'testing' => [
+            'driver' => 'mysql',
+            'host' => env('DB_TEST_HOST', '127.0.0.1'),
+            'port' => env('DB_TEST_PORT', '3306'),
+            'database' => env('DB_TEST_DATABASE', 'proje_adi_test'),
+            'username' => env('DB_TEST_USERNAME', 'kullanici_adi'),
+            'password' => env('DB_TEST_PASSWORD', 'sifre'),
+        ],
     ],
 
     /*

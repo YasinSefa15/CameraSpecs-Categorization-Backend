@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('sensor_info', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('camera_id')->constrained('cameras');
+            $table->foreignId('camera_id')->constrained('cameras')->cascadeOnDelete();
             $table->string('sensor', 32);
-            $table->unsignedDouble('diagonal');
+            $table->string('diagonal', 32);
             $table->string('surface_area', 32);
             $table->string('pixel_pitch', 32);
             $table->string('pixel_area', 32);

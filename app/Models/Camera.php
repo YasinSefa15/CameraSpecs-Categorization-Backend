@@ -17,6 +17,11 @@ class Camera extends Model
         'year',
     ];
 
+    protected $casts = [
+        'megapixels' => 'double',
+        'year' => 'integer',
+    ];
+
     public function images()
     {
         return $this->morphMany('App\Models\Image', 'taggable');

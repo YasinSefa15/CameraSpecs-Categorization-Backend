@@ -17,3 +17,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+.env.testing
+/public/images/brands/
+/public/images/cameras/

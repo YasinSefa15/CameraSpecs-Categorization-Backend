@@ -14,6 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::prefix('crawl')
+    ->controller(\App\Http\Controllers\CrawlController::class)
+    ->group(function () {
+        Route::get('/brands', 'brands');
+        Route::get('/cameras', 'cameras');
+    });
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
